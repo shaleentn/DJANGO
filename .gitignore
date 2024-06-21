@@ -1,0 +1,12 @@
+# Ignore virtual environment
+myvenv/
+
+# Ignore other common files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+.env
+.DS_Store
+db.sqlite3

@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Library/css/style.css' %}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="logo"></div>
+    
+<div class="container">
+    <div class="login">
+        <div class="welcome_msg">
+           
+        </div>
+    
+    <form method="post">
+        <h2>Welcome Back!</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up!</a></a></p>
+    </form>
+</div>
+   
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
